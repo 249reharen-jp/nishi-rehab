@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横浜市西区リハビリテーション連絡会</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* デザイン設定：横浜の海と誠実さをイメージしたネイビーとブルー */
+        :root {
+            --main-color: #003366; /* ネイビー */
+            --sub-color: #006699;  /* ブルー */
+            --accent-color: #e6f2ff; /* 薄い水色 */
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            color: var(--main-color);
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--sub-color);
+        }
+
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1590664082210-fe393a98c56e?q=80&w=2000') center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 60px 10% 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: var(--main-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 3つの役割 */
+        .roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .role-card {
+            background: var(--accent-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .role-card i {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 15px;
+        }
+
+        /* 会員限定ボタン */
+        .member-box {
+            background-color: var(--main-color);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-drive {
+            display: inline-block;
+            background-color: #fff;
+            color: var(--main-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* 施設リスト表 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: var(--main-color);
+            color: white;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav ul { margin-top: 10px; }
+            nav ul li { margin: 0 10px; }
+            section { padding: 40px 5%; }
+            .hero h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>横浜市西区リハビリテーション連絡会</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">紹介</a></li>
+            <li><a href="#list">施設リスト</a></li>
+            <li><a href="#activities">活動資料</a></li>
+            <li><a href="#contact">窓口</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>地域と、リハビリをつなぐ。</h2>
+    <p>横浜市西区の専門職が有志で集うリハビリテーションネットワーク</p>
+</section>
+
+<section id="about">
+    <h3 class="section-title">連絡会の役割</h3>
+    <div class="roles">
+        <div class="role-card">
+            <i class="fas fa-handshake"></i>
+            <h4>地域課題の解決</h4>
+            <p>西区特有のリハビリ課題を抽出し、地域ネットワークで解決を目指します。</p>
+        </div>
+        <div class="role-card">
+            <i class="fas fa-users"></i>
+            <h4>多職種連携の窓口</h4>
+            <p>ケアマネジャーや地域住民の方がリハビリの事で困った時の頼れる相談先です。</p>
+        </div>
+        <div class="role-card">
+            <i class="fas fa-book-medical"></i>
+            <h4>知識・資料の共有</h4>
+            <p>有志メンバーによる活動報告や、実務で役立つ資料の配布を行っています。</p>
+        </div>
+    </div>
+</section>
+
+<section id="list" style="background-color: var(--light-gray);">
+    <h3 class="section-title">参加施設リスト</h3>
+    <p>横浜市西区内のリハビリテーション提供施設一覧です。</p>
+    <div style="overflow-x: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>施設名</th>
+                    <th>サービス種類</th>
+                    <th>所在地</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>◯◯訪問看護ステーション</td>
+                    <td>訪問リハ</td>
+                    <td>横浜市西区◯◯町1-2-3</td>
+                </tr>
+                <tr>
+                    <td>△△リハビリテーション病院</td>
+                    <td>外来・入院</td>
+                    <td>横浜市西区△△町4-5-6</td>
+                </tr>
+                <!-- 施設が増えたらここに追加 -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="activities">
+    <h3 class="section-title">活動報告・資料室</h3>
+    <p>定期的な定例会や研修会の履歴を紹介しています。</p>
+    <ul>
+        <li>2024.10.20：第5回 西区ケアマネジャー向けリハビリ講習会 実施</li>
+        <li>2024.08.15：地域課題検討会議（フレイル予防について）</li>
+    </ul>
+
+    <div class="member-box">
+        <h4>会員専用ページ</h4>
+        <p>活動で使用したスライドや配布資料の原本はこちらから閲覧・保存可能です。</p>
+        <a href="https://drive.google.com/..." class="btn-drive" target="_blank">
+            <i class="fab fa-google-drive"></i> 会員限定Googleドライブ
+        </a>
+    </div>
+</section>
+
+<section id="contact">
+    <h3 class="section-title">お問い合わせ・相談窓口</h3>
+    <p style="text-align: center;">
+        リハビリに関するご相談、当会への参加希望などは、事務局までご連絡ください。<br><br>
+        <strong>横浜市西区リハビリテーション連絡会 事務局</strong><br>
+        （◯◯病院 リハビリテーション科内）<br>
+        <i class="fas fa-envelope"></i> email@example.com<br>
+        <i class="fas fa-phone"></i> 045-xxx-xxxx
+    </p>
+</section>
+
+<footer style="background-color: var(--main-color); color: white; text-align: center; padding: 20px;">
+    <p style="font-size: 0.8rem;">&copy; 2024 横浜市西区リハビリテーション連絡会</p>
+</footer>
+
+</body>
+</html>
